@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<title>HAP&D</title>
+
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+  	<meta charset="utf-8">
+ 	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  	
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="css/estilos.css?n=5">
+	   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/acciones.js?n=3"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<img class="img-responsive logo" src="img/logo.png">
+		</div>		
+	</div>
+  <div id="menuInicio" class="row" hidden="">
+    <nav class="navbar navbar-expand-sm centrado">
+      <ul class="navbar-nav">
+        <li class="nav-item btn">
+          <a class="nav-link" onclick="proveedor(this)">Proveedores</a>
+        </li>
+        <li class="nav-item btn">
+          <a class="nav-link" onclick="fecha(this)">Fechas de Revisión</a>
+        </li>
+        <li class="nav-item btn">
+          <a class="nav-link" onclick="factura(this)">Facturas</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div id="mensajeBienvenida" class="row bienvenida" hidden="">
+    <div class="col-sm-12 padding">
+      <h1 class="centrado">Bienvenido <programacion class="nombreUser"></programacion> a Plataforma de Pre-revisión</h1>
+    </div>
+  </div>
+  	<div id="screenLogin" class="row">
+  		<div class="col-sm-6 happy padding">
+  			<h1>Plataforma de Pre-revisión</h1>
+  			<hr>
+  			<p class="col-sm-12">Lorem ipsum dolor sit amet, cibo sensibus interesset no sit. Et dolor possim volutpat qui. No malis tollit iriure eam, et vel tale zril blandit, rebum vidisse nostrum qui eu. No nostrud dolorem legendos mea, ea eum mucius oporteat platonem.Eam an case scribentur, ei clita causae cum, alia debet eu vel.</p>
+  			
+  		</div>
+  		
+  		<div class="col-sm-6 padding">
+  			<h1>Login</h1>
+  			<hr>
+  			<form action="/action_page.php" id="formLogin">
+  				<div class="form-group">
+      				<label for="email">Email:</label>
+      				<input type="email" class="form-control"  placeholder="Enter email" name="email" id="email" required="">
+    			</div>
+    			<div class="form-group">
+      				<label for="pwd">Password:</label>
+      				<input type="password" class="form-control"  placeholder="Enter password" name="pswd" id="pswd" required="">
+    			</div>
+    			<!--div class="form-group form-check">
+      				<label class="form-check-label">
+        				<input class="form-check-input" type="checkbox" name="remember"> Remember me
+      				</label>
+    			</div-->
+    			<button id="buttonLogin" type="submit" class="btn btn-dark">Login</button>
+          <br>
+          <br>
+          <p id="warningLogin" class="text-warning" hidden="">Es posible que tu Email o el Password esten mal escritos</p>
+  			</form>
+  			
+  		</div>
+  	</div>
+  	<div id="listProveedor" class="row" hidden="">
+  		<div class="col-sm-12 padding">
+  			<table class="table table-hover">
+    			<thead>
+     	 			<tr>
+       					<th>Usuario</th>
+        				<th>Correo</th>
+        				<th>Acciones</th>
+      				</tr>
+    			</thead>
+    			<tbody >
+      				
+    			</tbody>
+  			</table>
+  		</div>
+  	</div>
+    <div id="addProveedor" class="row"  hidden="">
+      <div class="col-sm-6 padding centrado">
+        <h1>Registro</h1>
+        <hr>
+        <form action="/action_page.php">
+          
+          <div class="form-group">
+              <label for="email">Razón Social:</label>
+              <input type="email" class="form-control" id="razon" placeholder="Razón Social" name="razon">
+          </div>
+          <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email2" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pswd2" placeholder="Enter password" name="pswd">
+          </div>
+          <!--div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+              </label>
+          </div-->
+          <button type="submit" class="btn btn-dark">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  	<footer>
+  		<div class="col-sm-12 padding">
+			<p class="center">2018 © Mexico City</p>
+		</div>	
+  	</footer>
+</div>
+
+</body>
+</html>
